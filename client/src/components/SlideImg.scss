@@ -1,0 +1,105 @@
+.slide_box {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  & > .radio_box {
+    display: none;
+  }
+  & > .slide_wrap {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    & > .slide_list {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      white-space: nowrap;
+      display: block;
+      position: relative;
+      & > li {
+        max-width: 100%;
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        &.active {
+          display: inline-block;
+          left: 0%;
+        }
+        &.next {
+          display: inline-block;
+          left: 100%;
+        }
+        &.prev {
+          display: inline-block;
+          left: -100%;
+        }
+
+        & > .li_box {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: relative;
+          & > img {
+            width: 100%;
+            height: 100%;
+            -webkit-user-drag: none;
+          }
+        }
+      }
+      & > .arrow_box {
+        position: relative;
+        width: 100%;
+        top: 50%;
+        position: relative;
+        & > label {
+          position: absolute;
+          transform: translateY(-50%);
+          padding: 30px;
+          cursor: pointer;
+        }
+        & > .arrow_left {
+          left: 30px;
+          background: url("../../public/imgs/arrow_back.png") center center / 100% no-repeat;
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(255deg) brightness(101%) contrast(104%);
+        }
+        & > .arrow_right {
+          right: 30px;
+          background: url("../../public/imgs/arrow_forward.png") center center / 100% no-repeat;
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(255deg) brightness(101%) contrast(104%);
+        }
+      }
+      & > .disable {
+        pointer-events: none;
+      }
+      & > .pagination_box {
+        position: absolute;
+        width: 100%;
+        bottom: 10%;
+        & > ul {
+          width: 100%;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          & > li {
+            & > label {
+              display: block;
+              background-color: rgb(180, 180, 180);
+              border-radius: 100%;
+              width: 10px;
+              height: 10px;
+              margin: 0px 10px;
+              cursor: pointer;
+            }
+            & > .active {
+              background-color: #2e5326;
+            }
+          }
+        }
+      }
+    }
+  }
+}

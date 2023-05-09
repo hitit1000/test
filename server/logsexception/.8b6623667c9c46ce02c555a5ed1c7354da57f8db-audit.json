@@ -1,0 +1,40 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\hclee\\Desktop\\backend-template\\logsexception\\.8b6623667c9c46ce02c555a5ed1c7354da57f8db-audit.json",
+    "files": [
+        {
+            "date": 1674095756221,
+            "name": "C:\\Users\\hclee\\Desktop\\backend-template\\logsexception\\2023-01-19.exception.log",
+            "hash": "4f07fdfc0c235e2564097889f8ee69a66dba99297d4e27c9914f1ed0e77d7ad8"
+        },
+        {
+            "date": 1674172806703,
+            "name": "C:\\Users\\hclee\\Desktop\\backend-template\\logsexception\\2023-01-20.exception.log",
+            "hash": "044e5202d55b3b393d9e5bda5d40db318c37ae0951b744f2765e2c55708b7674"
+        },
+        {
+            "date": 1674607769346,
+            "name": "C:\\Users\\hclee\\Desktop\\backend-template\\logsexception\\2023-01-25.exception.log",
+            "hash": "bc2cc1b2ca8196ad5f827f82916dfc1f6e1e3f71296ead403c56d32427864550"
+        },
+        {
+            "date": 1674695414462,
+            "name": "C:\\Users\\hclee\\Desktop\\backend-template\\logsexception\\2023-01-26.exception.log",
+            "hash": "7af533b3afd9149d23cc803cd6bd233aff6cce7a726739655dd2c66942f9de84"
+        },
+        {
+            "date": 1675046760954,
+            "name": "C:\\Users\\hclee\\Desktop\\backend-template\\logsexception\\2023-01-30.exception.log",
+            "hash": "b0ce079b1bdd88858c23aeb17882893cf1e4a904b13230ded570d94c03e91950"
+        },
+        {
+            "date": 1675130945080,
+            "name": "C:\\Users\\hclee\\Desktop\\backend-template\\logsexception\\2023-01-31.exception.log",
+            "hash": "ffd47cc636d8cc3b66af6f842aceadc919d149a848413564ed80c687f917d660"
+        }
+    ],
+    "hashType": "sha256"
+}

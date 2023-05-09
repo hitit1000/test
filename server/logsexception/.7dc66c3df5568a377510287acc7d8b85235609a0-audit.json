@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\hclee\\Desktop\\base\\logsexception\\.7dc66c3df5568a377510287acc7d8b85235609a0-audit.json",
+    "files": [
+        {
+            "date": 1673567986958,
+            "name": "C:\\Users\\hclee\\Desktop\\base\\logsexception\\2023-01-13.exception.log",
+            "hash": "7b58af7e491035410aba249ca3e11fad8b1231c3e9980de081528729fbf2c17b"
+        },
+        {
+            "date": 1673852629287,
+            "name": "C:\\Users\\hclee\\Desktop\\base\\logsexception\\2023-01-16.exception.log",
+            "hash": "c5438b555c8d84da67be3391d5f0ca6458d6b5b0ae42b2f3d62e1fb656cd3175"
+        },
+        {
+            "date": 1674019558236,
+            "name": "C:\\Users\\hclee\\Desktop\\base\\logsexception\\2023-01-18.exception.log",
+            "hash": "08b3c87410826cfa67aff26ce9f057728e92f697d7e57e11cf87298955b05086"
+        }
+    ],
+    "hashType": "sha256"
+}

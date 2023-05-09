@@ -1,0 +1,48 @@
+.law_wrap {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > .inputs {
+    width: 100%;
+    & > .input_box {
+      width: 100%;
+      width: 100%;
+      & > label,
+      & > input,
+      & > select {
+        display: inline-block;
+        width: 50%;
+      }
+      & > label {
+        &::before {
+          content: "√";
+          font-weight: 900;
+        }
+        &::after {
+          content: ":";
+          float: right;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  & > button {
+    width: 100%;
+    margin-top: 18px;
+  }
+  & > .review_box {
+    margin-top: 16px;
+    width: 100%;
+    & > .review {
+      margin-top: 16px;
+      display: flex;
+      & > .category {
+        width: 50%;
+      }
+      & > .item_box {
+        width: 50%;
+      }
+    }
+  }
+}
