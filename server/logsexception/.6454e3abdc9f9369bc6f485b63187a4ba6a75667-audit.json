@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\hclee\\Desktop\\platform\\server\\logsexception\\.6454e3abdc9f9369bc6f485b63187a4ba6a75667-audit.json",
+    "files": [
+        {
+            "date": 1683595378729,
+            "name": "C:\\Users\\hclee\\Desktop\\platform\\server\\logsexception\\2023-05-09.exception.log",
+            "hash": "50701a934ca2a0a092dc10dbe8c33507de137c5945cd23642dafdebe2eb91985"
+        }
+    ],
+    "hashType": "sha256"
+}

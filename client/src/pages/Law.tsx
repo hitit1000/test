@@ -45,7 +45,6 @@ const Law = () => {
     setLawReview(newLawReview);
   };
   const displayReview = () => {
-    console.log(typeof lawReview, lawReview);
     return Object.keys(lawReview).map((category, index) => {
       return (
         <div className="review" key={index}>

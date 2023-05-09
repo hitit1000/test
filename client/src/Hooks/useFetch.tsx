@@ -22,7 +22,7 @@ const fetchGet = async (path: string, host?: string, query?: { [key: string]: an
       .map((q) => encodeURIComponent(q) + "=" + encodeURIComponent(query[q]))
       .join("&");
   }
-  // console.log(`url = ${host ? host : process.env.REACT_APP_SERVER_URL}/${path}${queryString ? "?" + queryString : ""}`);
+  console.log(`${process.env.REACT_APP_SERVER_URL}/${path}${queryString ? "?" + queryString : ""}`);
   return await fetch(`${process.env.REACT_APP_SERVER_URL}/${path}${queryString ? "?" + queryString : ""}`)
     .then((res) => {
       if (!res.ok) throw new Error(`${res.status} 에러가 발생했습니다.`);
