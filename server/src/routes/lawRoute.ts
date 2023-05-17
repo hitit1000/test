@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.get("/", async (req: express.Request, res: express.Response, next: express.NextFunction) => {
   const inputList = lawInputList();
+  console.log("inputList");
   res.status(200).send({
     inputList,
   });

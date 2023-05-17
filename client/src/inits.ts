@@ -1,8 +1,8 @@
 import { typeLawOptions, typeLawQuery } from "./types";
 
 const initLawOptions: typeLawOptions = {
-  region: ["1"],
-  client: ["2"],
+  region: [""],
+  client: [""],
   usage: [""],
   approval: [""],
   construct: [""],
