@@ -23,7 +23,14 @@ const signup = async (name: string, plainPassword: string, email: string, phone:
   }
   return result;
 };
-const signup2 = async (name: string, plainPassword: string, email: string, phone: string, login_type: string | number, auth_type: string | number) => {
+const signup2 = async (
+  name: string,
+  plainPassword: string,
+  email: string,
+  phone: string,
+  login_type: string | number,
+  auth_type: string | number
+) => {
   let msg = "";
   let result = false;
   try {
@@ -92,19 +99,22 @@ const signup2 = async (name: string, plainPassword: string, email: string, phone
 
 const login = async (name: string, plainPassword: string) => {
   let result = false;
-  const [rows]: any = await mysql.query(
-    `SELECT auth.password.salt,auth.password.password FROM member.user right OUTER JOIN auth.password ON member.user.user_no = auth.password.user_no WHERE member.user.user_name='${name}'`
-  );
-  const dbPassword = rows[0].password;
-  const dbSalt = rows[0].salt;
-  const password = await makePasswordHashed(plainPassword, dbSalt);
-  if (password === dbPassword) {
-    // 로그인 성공
-    logger.info("login succeed");
-    result = true;
-  } else {
-    // 로그인 실패
-    logger.info("login failed");
+  try {
+    const [rows]: any = await mysql.query(
+      `SELECT auth.password.salt,auth.password.password FROM member.user right OUTER JOIN auth.password ON member.user.user_no = auth.password.user_no WHERE member.user.user_name='${name}'`
+    );
+    const dbPassword = rows[0].password;
+    const dbSalt = rows[0].salt;
+    const password = await makePasswordHashed(plainPassword, dbSalt);
+    if (password === dbPassword) {
+      // 로그인 성공
+      logger.info("login succeed");
+      result = true;
+    } else {
+      logger.info(`login failed - wrong password ( user id "${name}" )`);
+    }
+  } catch (e) {
+    logger.info(`login failed - wrong account`);
   }
   return result;
 };

@@ -2,12 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
-body {
+/* body {
   overflow: overlay;
-}
-.full {
+} */
+/* .full {
   margin-left: 200px;
   transition: 0.2s;
 }
@@ -20,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 li {
   list-style: none;
 }

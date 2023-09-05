@@ -1,0 +1,60 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\workspace\\platform\\server\\logsexception\\.957ed1b2058d144384f748d944f8e01a5667b32e-audit.json",
+    "files": [
+        {
+            "date": 1687591184513,
+            "name": "C:\\workspace\\platform\\server\\logsexception\\2023-06-24.exception.log",
+            "hash": "b623060c37a882fa129e667b93e2b420ba70b6282769a9d278a1720d7644ad72"
+        },
+        {
+            "date": 1688518596484,
+            "name": "C:\\workspace\\platform\\server\\logsexception\\2023-07-05.exception.log",
+            "hash": "d51e30be9db0d56444ebdc61a13ea86bb472dc951840537ba2cf0fac08ba3e55"
+        },
+        {
+            "date": 1688948109161,
+            "name": "C:\\workspace\\platform\\server\\logsexception\\2023-07-10.exception.log",
+            "hash": "ba1ac95ba2a36f0e96c1156db8fb9f09ae072d2f5804b186e9305e54040abf3d"
+        },
+        {
+            "date": 1691398066130,
+            "name": "C:\\workspace\\platform\\server\\logsexception\\2023-08-07.exception.log",
+            "hash": "33d56c3f35651c8f94d910d45194d5dea4e9480ec690c803adbda7442adf0e70"
+        },
+        {
+            "date": 1693199444424,
+            "name": "C:\\workspace\\platform\\server\\logsexception\\2023-08-28.exception.log",
+            "hash": "560a1a8a4f327e6aaaaf05c8b4f0337a28e7b6a56a9e3242772e9961850c1386"
+        },
+        {
+            "date": 1693267064098,
+            "name": "C:\\workspace\\platform\\server\\logsexception\\2023-08-29.exception.log",
+            "hash": "fa14ed73b35dfcf0b0e75aee0301b4ceb5d37773f84a76a122dbed6dd507a8c4"
+        },
+        {
+            "date": 1693378096229,
+            "name": "C:\\workspace\\platform\\server\\logsexception\\2023-08-30.exception.log",
+            "hash": "0ce99d6580480e88d85f8f125dd897729bbef316ae8c9d21b8eb0186b4da4ba2"
+        },
+        {
+            "date": 1693416185587,
+            "name": "C:\\workspace\\platform\\server\\logsexception\\2023-08-31.exception.log",
+            "hash": "2d54419ddec331aae3104eaabff5bae8cde84a313a92e13ec91934b852ddfb96"
+        },
+        {
+            "date": 1693529285254,
+            "name": "C:\\workspace\\platform\\server\\logsexception\\2023-09-01.exception.log",
+            "hash": "c6a2c1f45f12b51fc1b2f1c59b518ada55fe4d898769d046e438b03dd81e3c55"
+        },
+        {
+            "date": 1693815379061,
+            "name": "C:\\workspace\\platform\\server\\logsexception\\2023-09-04.exception.log",
+            "hash": "9324cc579167a1943f32ceda16716f750fc045eaaca55cf86628bd304dd547ce"
+        }
+    ],
+    "hashType": "sha256"
+}

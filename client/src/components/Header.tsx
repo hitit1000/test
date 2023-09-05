@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.scss";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 type propsType = { type: string; minimization?: any };
 
@@ -67,7 +69,11 @@ const Header = ({ type, minimization }: propsType) => {
         { item: "bolt-3", address: "/bolt3" },
       ],
     },
-    { main: "accessibility", address: "/accessibillity", img: "imgs/settings_accessibility.svg" },
+    {
+      main: "accessibility",
+      address: "/accessibillity",
+      img: "imgs/settings_accessibility.svg",
+    },
     { main: "water", address: "/water", img: "imgs/water_drop.svg" },
     {
       main: "settings",
@@ -99,11 +105,15 @@ const Header = ({ type, minimization }: propsType) => {
           </nav>
           <div className="sign_box">
             <div className="signup_box">
-              <button className="signup">Sign up</button>
+              <NavLink to="signup" className="menu_btn">
+                <span className="signup">Sign up</span>
+              </NavLink>
             </div>
             <div>|</div>
             <div className="signin_box">
-              <button className="signin">Sign in</button>
+              <NavLink to="signin" className="menu_btn">
+                <span className="signin">Sign in</span>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -208,5 +218,59 @@ const Header = ({ type, minimization }: propsType) => {
   // };
   return <>{type === "top" ? topHeader() : sideHeader()}</>;
 };
-
+const TopHeader = () => {
+  const navigate = useNavigate();
+  const signout = (e: any) => {
+    e.preventDefault();
+    axios.defaults.headers.common["Authorization"] = `Bearer`;
+    const option = {
+      url: `${process.env.REACT_APP_SERVER_URL}/member/logout`,
+      method: "post",
+      withCredentials: true,
+    };
+    axios(option)
+      .then((res) => {
+        navigate("/signin");
+      })
+      .catch((err) => {
+        console.log(err.message);
+        navigate("/signin");
+      });
+  };
+  return (
+    <header className="top_header">
+      <div className="header_box">
+        <div className="logo_box">
+          <NavLink to="/">
+            <img src="imgs/goesg_logo.png" alt="logo" />
+          </NavLink>
+        </div>
+        {/* <nav>
+          <div className="menu_box">
+            <ul className="main_menu"></ul>
+          </div>
+        </nav> */}
+        <div className="sign_box">
+          {/* <div className="signup_box">
+            <NavLink to="signup" className="menu_btn">
+              <span className="signup">Sign up</span>
+            </NavLink>
+          </div>
+          <div>|</div>
+          <div className="signin_box">
+            <NavLink to="signin" className="menu_btn">
+              <span className="signin">Sign in</span>
+            </NavLink>
+          </div> */}
+          <div className="signout_box">
+            <NavLink to="signout" className="menu_btn" onClick={signout}>
+              <span className="signout">로그아웃</span>
+            </NavLink>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
 export default Header;
+export { TopHeader };

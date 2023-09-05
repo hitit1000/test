@@ -6,7 +6,7 @@ const makeAccessToken = (payload: object) => {
   // 30m
 };
 const makeRefreshToken = (payload: object) => {
-  return jwt.sign(payload, String(tokenConfig.refreshKey), { expiresIn: "24h", issuer: "architecogroup" });
+  return jwt.sign(payload, String(tokenConfig.refreshKey), { expiresIn: "2m", issuer: "architecogroup" });
 };
 
 const decodePayLoad = (token: string) => {

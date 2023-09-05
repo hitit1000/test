@@ -1,0 +1,222 @@
+.projectmanagement_wrap {
+  font-family: "Manrope", sans-serif;
+  width: 1440px;
+  .blank {
+    height: 65px;
+  }
+  .title {
+    margin-top: 48px;
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #191d23;
+      margin-bottom: 8px;
+
+      // letter-spacing: -1px;
+    }
+    .detail {
+      font-size: 18px;
+      color: #64748b;
+    }
+  }
+  .table_wrap {
+    margin-top: 48px;
+    .header_box {
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      .table_name {
+        padding: 4px 12px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #191d23;
+        border-bottom: 2px solid #059669;
+      }
+      .btn_box {
+        display: flex;
+        button {
+          display: flex;
+          align-items: center;
+          border: none;
+          border-radius: 5px;
+          padding: 8px 16px;
+          margin-right: 24px;
+          color: white;
+          cursor: pointer;
+          svg {
+            margin-right: 8px;
+          }
+        }
+        .add,
+        .copy {
+          background-color: #059669;
+        }
+        .add:hover,
+        .copy:hover {
+          background-color: #057c56;
+        }
+        .delete {
+          background-color: #a11300;
+        }
+        .delete:hover {
+          background-color: #7e1002;
+        }
+      }
+    }
+    .filter_box {
+      display: flex;
+      justify-content: space-between;
+      background-color: #f7f8f9;
+      padding: 12px;
+      margin-top: 6px;
+      margin-bottom: 18px;
+      .search_box {
+        display: flex;
+        align-items: center;
+        padding: 1px;
+        border: 1px solid #e7eaee;
+        border-radius: 5px;
+        svg {
+          margin: 0px 8px;
+        }
+        input[type="text"] {
+          height: 32px;
+          width: 300px;
+          border: none;
+          // color: #64748b;
+          outline: none;
+        }
+        span {
+          font-size: 12px;
+          padding: 0px 8px;
+        }
+      }
+
+      .filter {
+        button {
+          height: 100%;
+          background-color: white;
+          color: #64748b;
+          padding: 0px 12px;
+          border: 1px solid #e7eaee;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          svg {
+            margin-right: 6px;
+          }
+        }
+        button:hover {
+          border: 1px solid #cdcfd3;
+        }
+        .filter_detail {
+          width: 150px;
+          height: 150px;
+          background-color: white;
+          position: absolute;
+          margin-top: 10px;
+          border: 1px solid #cdcfd3;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          padding: 16px;
+          label {
+            margin-top: 8px;
+            font-size: 14px;
+            input {
+              margin-right: 8px;
+            }
+          }
+        }
+        .filter_detail:after {
+          border-top: 0px solid transparent;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid #cdcfd3;
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: 30px;
+        }
+      }
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      > thead {
+        > tr {
+          > th {
+            font-size: 14px;
+            font-weight: 600;
+            color: #64748b;
+          }
+        }
+      }
+      tbody {
+        tr {
+          height: 48px;
+          cursor: pointer;
+        }
+        tr:hover {
+          background-color: #f7f8f9;
+        }
+        th,
+        td {
+          padding: 10px;
+          border-bottom: 1px solid #e7eaee;
+          font-size: 16px;
+          font-weight: 400;
+        }
+        input[type="button"] {
+          border: none;
+          padding: 8px 24px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .btn_edit {
+          color: #64748b;
+          background-color: #e7eaee;
+        }
+        .btn_edit:hover {
+          background-color: #d9dadb;
+        }
+        .btn_view {
+          color: white;
+          background-color: #059669;
+        }
+        .btn_view:hover {
+          background-color: #057954;
+        }
+        button {
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+        }
+        button:hover > svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+      .col1 {
+        width: 300px;
+      }
+      .col2 {
+        width: 150px;
+      }
+      .col3 {
+        width: 400px;
+      }
+      .col4 {
+        width: 150px;
+      }
+      .col5 {
+        width: 200px;
+      }
+      .col6,
+      .col7,
+      .col8 {
+        width: 80px;
+      }
+    }
+  }
+}

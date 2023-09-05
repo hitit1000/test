@@ -1,0 +1,74 @@
+.overview {
+  width: 1440px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+
+  > a {
+    display: block;
+    width: 300px;
+    height: 530px;
+    > .img_box {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+      > .wave {
+        height: 100%;
+        width: 100%;
+        left: 0%;
+        top: 0;
+        position: absolute;
+        fill: rgba(0, 0, 0, 0.5);
+        > .rect {
+          background-color: rgba(0, 0, 0, 0.5);
+          width: 100%;
+        }
+        > .svg {
+          background-image: url(../../public/imgs/wave2.svg);
+          position: relative;
+          display: block;
+          width: 200%;
+          left: -100%;
+          height: 50px;
+          animation: wave 5s infinite linear;
+        }
+      }
+      > .title {
+        width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+        padding-top: 20px;
+        color: white;
+        position: absolute;
+        top: 0;
+        text-align: center;
+      }
+      > .piechart {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        left: 25%;
+        padding-top: 30%;
+      }
+    }
+  }
+  > a:hover {
+    border: 2px solid transparent;
+  }
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}

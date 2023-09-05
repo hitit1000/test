@@ -1,29 +1,39 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
 import Home from "./pages/Home";
 import Law from "./pages/Law";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Overview from "./pages/Overview";
+import Projectmanagement from "./pages/Projectmanagement";
+import AuthLayout from "./components/AuthLayout";
 
+// useHistory
 function App() {
   const [mini, setMini] = useState(false);
   const bodyClass = () => {
     const isTop = true;
     let result = "";
-    if (mini) result += mini ? " mini" : " full";
-    if (isTop) result += isTop ? " top" : "";
+    // if (mini) result += mini ? " mini" : " full";
+    // if (isTop) result += isTop ? " top" : "";
     return result;
   };
   return (
     <div className={`App${bodyClass()}`}>
-      <BrowserRouter>
-        <Header type="top" />
-        {/* <Header type="side" minimization={setMini} /> */}
-        <Routes>
+      {/* <BrowserRouter> */}
+      {/* <Header type="side" minimization={setMini} /> */}
+      <Routes>
+        <Route path="/signin" element={<Login />} />
+        <Route path="/Signup" element={<Signup />} />
+        <Route element={<AuthLayout />}>
+          <Route path="/architeco" element={<Overview />} />
           <Route path="/law" element={<Law />} />
+          <Route path="/project" element={<Projectmanagement />} />
           <Route path="/" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
+        </Route>
+      </Routes>
+      {/* </BrowserRouter> */}
     </div>
   );
 }
